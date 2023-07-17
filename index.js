@@ -24,21 +24,30 @@ const questions = [
             name: `license`,
             type: `list`,
             message: `Do you need a license for your project?`,
-            choices: [`MIT`, `Berkeley Software Distribution (BSD)`, `Apache 2.0`, `None`]
+            choices: [`MIT`, `BSD`,`GPL`,`Apache2`, `None`]
         },
         {
             name: `github`,
             type: `input`,
             message: `What is the Github username?`,
         },
+        {
+            name: `email`,
+            type: `input`,
+            message: `What is a good contact email for you?`,
+        },
 
     
 ];
+
+
 
 inquirer.prompt(questions)
 .then(answers=>{
     fs.writeFileSync("./dist/README.md",`
 # ${answers.projectName}
+![badge](https://img.shields.io/badge/license-${answers.license}-blue)
+
 
 ## Table Of Contents
 - [Description](#description)
@@ -55,8 +64,11 @@ ${answers.use}
 ${answers.license}
 
 ## Questions
-If you have any questions, you can reach me at https://github.com/${answers.github}
-
+If you have any questions, you can reach me at https://github.com/${answers.github} <br/>![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)<br/>
+<br/>
+or reach out to my email at ${answers.email} <br/>
+![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) <br/>
+### [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
     `)
 })
