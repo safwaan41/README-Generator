@@ -1,6 +1,6 @@
 
-# ReadMe Generator
-![badge](https://img.shields.io/badge/license-MIT-blue)
+# Note Taker Express
+![badge](https://img.shields.io/badge/license-None-blue)
 
 
 ## Table Of Contents
@@ -9,13 +9,13 @@
 - [License](#license)
 - [Questions](#questions)
 ## Description
-The readme generator can dynamically create readme files for any project
+This application allows the user to save and delete notes hosted on a server
 
 ## Use
-The best use of this application would be to create a new readme file from these node prompts
+To better track any to-do's 
 
 ## License
-MIT
+None
 
 ## Questions
 If you have any questions, you can reach me at https://github.com/safwaan41 <br/>![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)<br/>
